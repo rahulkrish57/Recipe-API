@@ -1,5 +1,5 @@
 let container = document.querySelector("#bottomPart");
-let row = newElem("div", "row");
+let row = newElem("div", "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3");
 
 container.append(row);
 
