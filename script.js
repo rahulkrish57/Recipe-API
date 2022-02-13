@@ -1,5 +1,5 @@
 let container = document.querySelector("#bottomPart");
-let row = newElem("div", "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3");
+let row = newElem("div", "row");
 
 container.append(row);
 
@@ -18,14 +18,12 @@ async function apiFunc(dish) {
         var res = await fetch(apiUrl+dish+apikey);
 
         var data = await res.json();
-        console.log(data.hits[2].recipe);
-        var len = data.hits;
-        let totDai = data.hits[0].recipe.totalDaily.CA.label;
+     
         var id = 0;
         for( i=0; i<len.length; i++) {
 
         
-        let col = newElem("div", "col-md-2 col-lg-4 ");
+        let col = newElem("div", "col-md-4 col-lg-4");
         let card = newElem("div", "card shadow-sm");
             let img = newElem("img", "card-img-top");
                 img.setAttribute("alt", "Image");
