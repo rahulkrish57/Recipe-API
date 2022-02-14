@@ -18,7 +18,7 @@ async function apiFunc(dish) {
         var res = await fetch(apiUrl+dish+apikey);
 
         var data = await res.json();
-     
+     	 var len = data.hits;
         var id = 0;
         for( i=0; i<len.length; i++) {
 
